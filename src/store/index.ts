@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import 'rxjs/Rx';
 import { logger } from 'redux-logger';
 import { createEpicMiddleware } from 'redux-observable';
 import { rootReducer } from './root-reducer';

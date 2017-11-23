@@ -1,7 +1,9 @@
 export interface ITodoState {
-  toDoToAdd: string;
+  toDoToList: Array<string>;
+  loading: boolean;
 }
 
 export const defaultTodoState: ITodoState = {
-  toDoToAdd: ''
+  toDoToList: [],
+  loading: false
 };

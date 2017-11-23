@@ -2,16 +2,21 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { IAppState } from '../../store/state';
 import { TodoWrapper } from './todo-wrapper';
-import { addTodo } from '../../store/actions';
+import { addTodo, removeTodo } from '../../store/actions';
 
 const mapStateToProps = (state: IAppState) => {
-  return {};
+  return {
+    todoItems: state.todo.toDoToList
+  };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<IAppState>) => {
   return {
-    addTodo() {
-      dispatch(addTodo('Added!'));
+    addTodo(todo: string) {
+      dispatch(addTodo(todo));
+    },
+    removeTodo(todo: string) {
+      dispatch(removeTodo(todo));
     }
   };
 };
