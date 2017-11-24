@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
-import { ToDoContainer } from './pages/todo/container';
+import { AppRouter } from './app-router';
 
 const App = ({ store }) => {
   return (
     <Provider store={store}>
-      <div className="App">
-        <ToDoContainer />
-      </div>
+      <AppRouter />
     </Provider>
   );
 };

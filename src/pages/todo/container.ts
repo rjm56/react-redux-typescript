@@ -3,6 +3,8 @@ import { Dispatch } from 'redux';
 import { IAppState } from '../../store/state';
 import { TodoWrapper } from './todo-wrapper';
 import { addTodo, removeTodo } from '../../store/actions';
+import { push } from 'react-router-redux';
+import { routes } from '../../routes';
 
 const mapStateToProps = (state: IAppState) => {
   return {
@@ -17,6 +19,9 @@ const mapDispatchToProps = (dispatch: Dispatch<IAppState>) => {
     },
     removeTodo(todo: string) {
       dispatch(removeTodo(todo));
+    },
+    onItemSelect(index: number) {
+      dispatch(push(routes.details(index.toString())));
     }
   };
 };
