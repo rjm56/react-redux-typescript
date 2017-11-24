@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { setTodoName } from './state-changes';
 
-interface IAddToDoProps {
+export interface IAddToDoProps {
   addTodo(todo: string): void;
 }
 
@@ -17,9 +18,7 @@ export class AddToDo extends React.Component<IAddToDoProps, IAddToDoState> {
   }
 
   handleChange(value: string) {
-    this.setState({
-      todoName: value
-    });
+    this.setState(setTodoName(value));
   }
 
   handleEnter(event: any) {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToDo /> should render without crashing 1`] = `
+<AddToDo
+  addTodo={[Function]}
+>
+  <div>
+    <input
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Add todo
+    </button>
+  </div>
+</AddToDo>
+`;
